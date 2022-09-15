@@ -1,0 +1,6 @@
+dist/
+www/
+loader/
+
+package-lock.json
+src/components.d.ts
