@@ -1,6 +1,6 @@
 {
 	"name": "@cortado-holding/animation",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Custom element for playing Lottie animations.",
 	"license": "MIT",
 	"author": "Cortado Holding AG",
