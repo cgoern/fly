@@ -1,7 +1,7 @@
 {
 	"name": "@cortado-holding/animation",
 	"version": "1.0.1",
-	"description": "Custom element for playing Lottie animations.",
+	"description": "Custom element for rendering Lottie animations.",
 	"license": "MIT",
 	"author": "Cortado Holding AG",
 	"main": "dist/index.cjs.js",
