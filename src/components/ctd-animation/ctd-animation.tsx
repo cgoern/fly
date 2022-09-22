@@ -1,5 +1,5 @@
-import { Component, Host, Element, Prop, h } from '@stencil/core'
-import lottieWeb from 'lottie-web'
+import { Component, Host, Element, Prop, Method, h } from '@stencil/core'
+import lottieWeb, { LottiePlayer } from 'lottie-web'
 
 @Component({
 	tag: 'ctd-animation',
@@ -9,6 +9,7 @@ import lottieWeb from 'lottie-web'
 export class CtdAnimation {
 	private wrapper: HTMLDivElement
 	private animationData: any
+	private player: LottiePlayer = lottieWeb
 
 	/**
 	 * The host element.
@@ -18,7 +19,7 @@ export class CtdAnimation {
 	/**
 	 * Wether the animation should start automatically.
 	 */
-	@Prop() autoplay: boolean = true
+	@Prop() autoplay: boolean = false
 
 	/**
 	 * The animation data as JSON-parsable string.
@@ -34,6 +35,11 @@ export class CtdAnimation {
 	 * Wether the animation should repeat infinitely
 	 */
 	@Prop() loop: boolean = true
+
+	/**
+	 * The name of the animation.
+	 */
+	@Prop() name: string = ''
 
 	/**
 	 * The URL to a JSON file, containing the animation data.
@@ -77,7 +83,8 @@ export class CtdAnimation {
 		/**
 		 * Initialize the animation.
 		 */
-		lottieWeb.loadAnimation({
+		this.player.loadAnimation({
+			name: this.name,
 			container: this.wrapper,
 			renderer: 'svg',
 			loop: this.loop,
@@ -87,6 +94,36 @@ export class CtdAnimation {
 				viewBoxOnly: true,
 			},
 		})
+	}
+
+	/**
+	 * Plays the animation.
+	 *
+	 * @return {Promise<void>}
+	 */
+	@Method()
+	async play(): Promise<void> {
+		this.player.play(this.name)
+	}
+
+	/**
+	 * Pauses the animation.
+	 *
+	 * @return {Promise<void>}
+	 */
+	@Method()
+	async pause(): Promise<void> {
+		this.player.pause(this.name)
+	}
+
+	/**
+	 * Stops the animation.
+	 *
+	 * @return {Promise<void>}
+	 */
+	@Method()
+	async stop(): Promise<void> {
+		this.player.stop(this.name)
 	}
 
 	render() {

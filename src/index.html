@@ -8,6 +8,34 @@
 		<script nomodule src="/build/animation.js"></script>
 	</head>
 	<body>
-		<ctd-animation url="/samples/dot.json" width="320px"></ctd-animation>
+		<ctd-animation id="animation" name="dot" url="/samples/dot.json" width="320px"></ctd-animation>
+		<ctd-animation url="/samples/dot.json" width="320px" autoplay></ctd-animation>
+
+		<button id="play">Play</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
+
+		<script>
+			;(async () => {
+				await customElements.whenDefined('ctd-animation')
+
+				const animation = document.querySelector('#animation')
+				const buttonPlay = document.querySelector('#play')
+				const buttonPause = document.querySelector('#pause')
+				const buttonStop = document.querySelector('#stop')
+
+				buttonPlay.onclick = async () => {
+					await animation.play()
+				}
+
+				buttonPause.onclick = async () => {
+					await animation.pause()
+				}
+
+				buttonStop.onclick = async () => {
+					await animation.stop()
+				}
+			})()
+		</script>
 	</body>
 </html>

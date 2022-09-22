@@ -24,6 +24,25 @@ export namespace Components {
          */
         "loop": boolean;
         /**
+          * The name of the animation.
+         */
+        "name": string;
+        /**
+          * Pauses the animation.
+          * @return
+         */
+        "pause": () => Promise<void>;
+        /**
+          * Plays the animation.
+          * @return
+         */
+        "play": () => Promise<void>;
+        /**
+          * Stops the animation.
+          * @return
+         */
+        "stop": () => Promise<void>;
+        /**
           * The URL to a JSON file, containing the animation data.
          */
         "url": string;
@@ -62,6 +81,10 @@ declare namespace LocalJSX {
           * Wether the animation should repeat infinitely
          */
         "loop"?: boolean;
+        /**
+          * The name of the animation.
+         */
+        "name"?: string;
         /**
           * The URL to a JSON file, containing the animation data.
          */
