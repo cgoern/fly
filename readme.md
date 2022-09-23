@@ -67,3 +67,50 @@ Or use CSS custom properties to control the animation dimensions responsively:
 ---
 
 You can find an overview of all supported attributes in the [component docs.](https://github.com/Cortado-Holding/animation/tree/main/src/components/ctd-animation)
+
+## Control play state
+
+Pass a `name` to the animation element & add some controls:
+
+```html
+<ctd-animation name="my-animation" url="/path/to/animation.json"></ctd-animation>
+
+<button id="play">Play</button>
+<button id="pause">Pause</button>
+<button id="stop">Stop</button>
+```
+
+Ensure the custom element is defined:
+
+```javascript
+;(async () => {
+  await customElements.whenDefined('ctd-animation')
+
+  // ...
+})()
+```
+
+Query selectors and call the element's methods:
+
+```javascript
+;(async () => {
+  await customElements.whenDefined('ctd-animation')
+
+  const animation = document.querySelector('ctd-animation')
+  const play = document.querySelector('#play')
+  const pause = document.querySelector('#pause')
+  const stop = document.querySelector('#stop')
+
+  play.onclick = async () => {
+    await animation.play()
+  }
+
+  pause.onclick = async () => {
+    await animation.pause()
+  }
+
+  stop.onclick = async () => {
+    await animation.stop()
+  }
+})()
+```
