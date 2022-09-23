@@ -1,9 +1,9 @@
 {
-	"name": "@cortado-holding/animation",
+	"name": "@cgoern/fly",
 	"version": "1.0.4",
 	"description": "Custom element for rendering Lottie animations.",
 	"license": "MIT",
-	"author": "Cortado Holding AG",
+	"author": "cgoern",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.js",
 	"es2015": "dist/esm/index.mjs",
@@ -11,10 +11,10 @@
 	"types": "dist/types/index.d.ts",
 	"collection": "dist/collection/collection-manifest.json",
 	"collection:main": "dist/collection/index.js",
-	"unpkg": "dist/animation/animation.esm.js",
+	"unpkg": "dist/fly/fly.esm.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cortado-holding/animation.git"
+		"url": "https://github.com/cgoern/fly.git"
 	},
 	"files": [
 		"dist/",

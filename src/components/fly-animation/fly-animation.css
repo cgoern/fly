@@ -1,0 +1,17 @@
+:host {
+	display: block;
+}
+
+svg {
+	display: block;
+
+	/**
+	 * @prop --fly-animation-height: The height of the animation. Defaults to `auto`.
+	 */
+	height: var(--fly-animation-height, auto);
+
+	/**
+	 * @prop --fly-animation-width: The width of the animation. Defaults to `auto`.
+	 */
+	width: var(--fly-animation-width, auto);
+}

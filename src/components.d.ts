@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface CtdAnimation {
+    interface FlyAnimation {
         /**
           * Wether the animation should start automatically.
          */
@@ -53,18 +53,18 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLCtdAnimationElement extends Components.CtdAnimation, HTMLStencilElement {
+    interface HTMLFlyAnimationElement extends Components.FlyAnimation, HTMLStencilElement {
     }
-    var HTMLCtdAnimationElement: {
-        prototype: HTMLCtdAnimationElement;
-        new (): HTMLCtdAnimationElement;
+    var HTMLFlyAnimationElement: {
+        prototype: HTMLFlyAnimationElement;
+        new (): HTMLFlyAnimationElement;
     };
     interface HTMLElementTagNameMap {
-        "ctd-animation": HTMLCtdAnimationElement;
+        "fly-animation": HTMLFlyAnimationElement;
     }
 }
 declare namespace LocalJSX {
-    interface CtdAnimation {
+    interface FlyAnimation {
         /**
           * Wether the animation should start automatically.
          */
@@ -95,14 +95,14 @@ declare namespace LocalJSX {
         "width"?: string;
     }
     interface IntrinsicElements {
-        "ctd-animation": CtdAnimation;
+        "fly-animation": FlyAnimation;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ctd-animation": LocalJSX.CtdAnimation & JSXBase.HTMLAttributes<HTMLCtdAnimationElement>;
+            "fly-animation": LocalJSX.FlyAnimation & JSXBase.HTMLAttributes<HTMLFlyAnimationElement>;
         }
     }
 }

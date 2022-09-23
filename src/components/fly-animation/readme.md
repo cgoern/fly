@@ -1,4 +1,4 @@
-# ctd-animation
+# fly-animation
 
 <!-- Auto Generated Below -->
 
@@ -44,7 +44,7 @@ Type: `Promise<void>`
 
 | Name                     | Description                                      |
 | ------------------------ | ------------------------------------------------ |
-| `--ctd-animation-height` | The height of the animation. Defaults to `auto`. |
-| `--ctd-animation-width`  | The width of the animation. Defaults to `auto`.  |
+| `--fly-animation-height` | The height of the animation. Defaults to `auto`. |
+| `--fly-animation-width`  | The width of the animation. Defaults to `auto`.  |
 
 ---

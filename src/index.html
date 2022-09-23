@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Cortado Animation</title>
-		<script type="module" src="/build/animation.esm.js"></script>
-		<script nomodule src="/build/animation.js"></script>
+		<title>fly</title>
+		<script type="module" src="/build/fly.esm.js"></script>
+		<script nomodule src="/build/fly.js"></script>
 	</head>
 	<body>
-		<ctd-animation id="animation" name="dot" url="/samples/dot.json" width="320px"></ctd-animation>
-		<ctd-animation url="/samples/dot.json" width="320px" autoplay></ctd-animation>
+		<fly-animation id="animation" name="dot" url="/samples/dot.json" width="320px"></fly-animation>
+		<fly-animation url="/samples/dot.json" width="320px" autoplay></fly-animation>
 
 		<button id="play">Play</button>
 		<button id="pause">Pause</button>
@@ -17,7 +17,7 @@
 
 		<script>
 			;(async () => {
-				await customElements.whenDefined('ctd-animation')
+				await customElements.whenDefined('fly-animation')
 
 				const animation = document.querySelector('#animation')
 				const buttonPlay = document.querySelector('#play')

@@ -2,11 +2,11 @@ import { Component, Host, Element, Prop, Method, h } from '@stencil/core'
 import lottieWeb, { LottiePlayer } from 'lottie-web'
 
 @Component({
-	tag: 'ctd-animation',
-	styleUrl: 'ctd-animation.css',
+	tag: 'fly-animation',
+	styleUrl: 'fly-animation.css',
 	shadow: true,
 })
-export class CtdAnimation {
+export class FlyAnimation {
 	private wrapper: HTMLDivElement
 	private animationData: any
 	private player: LottiePlayer = lottieWeb
@@ -14,7 +14,7 @@ export class CtdAnimation {
 	/**
 	 * The host element.
 	 */
-	@Element() host: HTMLCtdAnimationElement
+	@Element() host: HTMLFlyAnimationElement
 
 	/**
 	 * Wether the animation should start automatically.
@@ -68,14 +68,14 @@ export class CtdAnimation {
 		 * Optionally set animation width.
 		 */
 		if (this.width) {
-			this.host.style.setProperty('--ctd-animation-width', this.width)
+			this.host.style.setProperty('--fly-animation-width', this.width)
 		}
 
 		/**
 		 * Optionally set animation height.
 		 */
 		if (this.height) {
-			this.host.style.setProperty('--ctd-animation-height', this.height)
+			this.host.style.setProperty('--fly-animation-height', this.height)
 		}
 	}
 
